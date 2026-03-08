@@ -1,9 +1,11 @@
-import { useCallback } from "react";
+import { Suspense, useCallback } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useCart } from "../Contexts/CartContext.jsx";
 import PlanetDetailsSection from "../Components/Planet/PlanetDetailsSection.jsx";
 import PlanetPackagesSection from "../Components/Planet/PlanetPackagesSection.jsx";
 import PlanetNearbySection from "../Components/Planet/PlanetNearbySection.jsx";
+import AppLoader from "../Components/MicroComponents/AppLoader.jsx";
+import SuspenseGate from "../Components/MicroComponents/SuspenseGate.jsx";
 import usePlanetPageData from "../hooks/usePlanetPageData.jsx";
 
 export default function Planet() {
@@ -15,7 +17,7 @@ export default function Planet() {
     navigate("/404");
   }, [navigate]);
 
-  const { planet, stacks, prevPlanet, nextPlanet } = usePlanetPageData(
+  const { planet, stacks, prevPlanet, nextPlanet, isLoading } = usePlanetPageData(
     planetSlug,
     handleNotFound,
   );
@@ -27,13 +29,17 @@ export default function Planet() {
 
   return (
     <div className="planet-page">
-      <PlanetDetailsSection planet={planet} />
-      <PlanetPackagesSection
-        planet={planet}
-        stacks={stacks}
-        onAddToCart={handleAddToCart}
-      />
-      <PlanetNearbySection prevPlanet={prevPlanet} nextPlanet={nextPlanet} />
+      <Suspense fallback={<AppLoader text="Caricamento pianeta..." minHeight="55vh" />}>
+        <SuspenseGate isLoading={isLoading}>
+          <PlanetDetailsSection planet={planet} />
+          <PlanetPackagesSection
+            planet={planet}
+            stacks={stacks}
+            onAddToCart={handleAddToCart}
+          />
+          <PlanetNearbySection prevPlanet={prevPlanet} nextPlanet={nextPlanet} />
+        </SuspenseGate>
+      </Suspense>
     </div>
   );
 }

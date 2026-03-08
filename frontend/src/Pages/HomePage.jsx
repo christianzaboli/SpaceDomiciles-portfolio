@@ -14,6 +14,7 @@ export default function HomePage() {
   const [planet1, setPlanet1] = useState(null);
   const [planet2, setPlanet2] = useState(null);
   const [planet3, setPlanet3] = useState(null);
+  const [isLoadingPlanets, setIsLoadingPlanets] = useState(true);
 
   const updateHeight = useCallback(() => {
     if (!contentRef.current) return;
@@ -45,6 +46,8 @@ export default function HomePage() {
   }, [updateHeight]);
 
   const fetchPlanets = useCallback(async () => {
+    setIsLoadingPlanets(true);
+
     try {
       const [p1, p2, p3] = await Promise.all([
         axios.get(buildApiUrl("/api/planets/mars")),
@@ -57,6 +60,8 @@ export default function HomePage() {
       setPlanet3(p3.data);
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsLoadingPlanets(false);
     }
   }, []);
 
@@ -101,7 +106,10 @@ export default function HomePage() {
         <HomeIntroSection />
         <HomeFeatureCards />
         <HomeGalaxySection />
-        <HomePopularPlanetsSection planets={[planet1, planet2, planet3]} />
+        <HomePopularPlanetsSection
+          planets={[planet1, planet2, planet3]}
+          isLoading={isLoadingPlanets}
+        />
       </div>
     </div>
   );

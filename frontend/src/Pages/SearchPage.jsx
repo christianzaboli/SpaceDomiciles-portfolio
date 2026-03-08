@@ -1,8 +1,10 @@
 import { Link, useSearchParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import axios from "axios";
 import { useDefaultContext } from "../Contexts/DefaultContext.jsx";
 import FilterDrawer from "../Components/MicroComponents/FilterDrawer.jsx";
+import AppLoader from "../Components/MicroComponents/AppLoader.jsx";
+import SuspenseGate from "../Components/MicroComponents/SuspenseGate.jsx";
 import { buildApiUrl, scrollToTop } from "../libs/utils.jsx";
 
 export default function SearchPage() {
@@ -45,12 +47,16 @@ export default function SearchPage() {
   const queryString = new URLSearchParams(filters).toString();
 
   const [planets, setPlanets] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
+
     axios
       .get(`${buildApiUrl("/api/planets/filter")}?${queryString}`)
       .then((response) => setPlanets(response.data))
-      .catch((err) => console.error("Errore nel caricamento pianeti:", err));
+      .catch((err) => console.error("Errore nel caricamento pianeti:", err))
+      .finally(() => setIsLoading(false));
   }, [filters]);
 
   // gestione menù a tendina
@@ -94,37 +100,41 @@ export default function SearchPage() {
       </div>
 
       <div className="mw-cards-grid-s">
-        {displayedPlanets.length > 0 ? (
-          displayedPlanets.map((planet) => (
-            <Link
-              to={`/galaxies/${planet.galaxy_slug}/${planet.slug}`}
-              key={planet.id}
-              className="mw-card-search-s"
-              onClick={scrollToTop}
-            >
-              <div>
-                <div className="mw-explore-s">
-                  <h3>{planet.name}</h3>
-                </div>
-                <div
-                  className={`mw-planet-img-s mw-img-${planet.name
-                    .toLowerCase()
-                    .replace(/\s+/g, "-")}`}
-                  style={{ backgroundImage: `url(${planet.image})` }}
-                ></div>
-                <div className="mw-bottom-s">
-                  <p className="mw-desc-s">{planet.description}</p>
-                  <div className="mw-divider-s"></div>
-                  <div className="mw-explore-s">Esplora il pianeta →</div>
-                </div>
-              </div>
-            </Link>
-          ))
-        ) : (
-          <p className="no-results-s">
-            Nessun pianeta rispetta i parametri inseriti
-          </p>
-        )}
+        <Suspense fallback={<AppLoader text="Caricamento pianeti..." minHeight="28vh" />}>
+          <SuspenseGate isLoading={isLoading}>
+            {displayedPlanets.length > 0 ? (
+              displayedPlanets.map((planet) => (
+                <Link
+                  to={`/galaxies/${planet.galaxy_slug}/${planet.slug}`}
+                  key={planet.id}
+                  className="mw-card-search-s"
+                  onClick={scrollToTop}
+                >
+                  <div>
+                    <div className="mw-explore-s">
+                      <h3>{planet.name}</h3>
+                    </div>
+                    <div
+                      className={`mw-planet-img-s mw-img-${planet.name
+                        .toLowerCase()
+                        .replace(/\s+/g, "-")}`}
+                      style={{ backgroundImage: `url(${planet.image})` }}
+                    ></div>
+                    <div className="mw-bottom-s">
+                      <p className="mw-desc-s">{planet.description}</p>
+                      <div className="mw-divider-s"></div>
+                      <div className="mw-explore-s">Esplora il pianeta →</div>
+                    </div>
+                  </div>
+                </Link>
+              ))
+            ) : (
+              <p className="no-results-s">
+                Nessun pianeta rispetta i parametri inseriti
+              </p>
+            )}
+          </SuspenseGate>
+        </Suspense>
       </div>
 
       {visibleCount < planets.length && (

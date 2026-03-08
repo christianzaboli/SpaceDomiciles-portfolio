@@ -36,6 +36,23 @@ body {
 main {
   flex: 1 0 auto;
 }
+
+.app-loader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  pointer-events: auto;
+}
+
+.app-loader-text {
+  color: #e8d7ff;
+  font-size: 1rem;
+  text-align: center;
+}
+
 .no-scroll {
   overflow: hidden;
   height: 100vh;

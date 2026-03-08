@@ -6,6 +6,7 @@ export default function usePlanetPageData(planetSlug, onNotFound) {
   const [planet, setPlanet] = useState(null);
   const [stacks, setStacks] = useState(null);
   const [relatedPlanets, setRelatedPlanets] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (!planetSlug) return;
@@ -13,6 +14,8 @@ export default function usePlanetPageData(planetSlug, onNotFound) {
     let isActive = true;
 
     async function fetchPlanetAndStacks() {
+      setIsLoading(true);
+
       try {
         const [planetResult, stacksResult] = await Promise.allSettled([
           axios.get(buildApiUrl(`/api/planets/${planetSlug}`)),
@@ -27,19 +30,24 @@ export default function usePlanetPageData(planetSlug, onNotFound) {
           if (status === 404) {
             onNotFound?.();
           }
+        } else {
+          setPlanet(planetResult.value.data);
         }
-
-        setPlanet(planetResult.value.data);
 
         if (stacksResult.status !== "fulfilled") {
           console.error(
             "Errore nel caricamento pacchetti:",
             stacksResult.reason,
           );
+        } else {
+          setStacks(stacksResult.value.data);
         }
-        setStacks(stacksResult.value.data);
       } catch (error) {
         console.error("Errore nel caricamento dati del pianeta:", error);
+      } finally {
+        if (isActive) {
+          setIsLoading(false);
+        }
       }
     }
 
@@ -104,5 +112,6 @@ export default function usePlanetPageData(planetSlug, onNotFound) {
     stacks,
     prevPlanet,
     nextPlanet,
+    isLoading,
   };
 }
