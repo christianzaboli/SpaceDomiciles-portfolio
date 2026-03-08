@@ -2,7 +2,10 @@ import { useCart } from "../../Contexts/CartContext.jsx";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { scrollToTop } from "../../libs/utils.jsx";
+import { useWebHaptics } from "web-haptics/react";
+
 export default function CartDrawer({ open, onClose }) {
+  const { trigger } = useWebHaptics();
   const { items, onQtyChange } = useCart();
   const itemsArray = Object.values(items);
   const navigate = useNavigate();
@@ -50,7 +53,11 @@ export default function CartDrawer({ open, onClose }) {
                         <div className="delete-confirm-buttons">
                           <button
                             className="delete-confirm-yes"
-                            onClick={() => confirmDelete(item.id)}
+                            onClick={() => {
+                                trigger([{ duration: 8 }], { intensity: 0.3 })
+                              confirmDelete(item.id)
+                            }
+                            }
                           >
                             Sì
                           </button>

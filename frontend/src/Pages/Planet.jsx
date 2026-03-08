@@ -7,8 +7,11 @@ import PlanetNearbySection from "../Components/Planet/PlanetNearbySection.jsx";
 import AppLoader from "../Components/MicroComponents/AppLoader.jsx";
 import SuspenseGate from "../Components/MicroComponents/SuspenseGate.jsx";
 import usePlanetPageData from "../hooks/usePlanetPageData.jsx";
+import { useWebHaptics } from "web-haptics/react";
+
 
 export default function Planet() {
+  const { trigger } = useWebHaptics();
   const navigate = useNavigate();
   const { planetSlug } = useParams();
   const { addToCart } = useCart();
@@ -23,7 +26,9 @@ export default function Planet() {
   );
 
   const handleAddToCart = (packageProps) => {
+
     if (packageProps.stock <= 0) return;
+    trigger([ { duration: 30 }, { delay: 60, duration: 40, intensity: 1 } ])
     addToCart(packageProps);
   };
 
