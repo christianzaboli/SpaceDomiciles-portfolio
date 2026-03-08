@@ -19,7 +19,7 @@ export default function HomeIntroSection() {
         className="descrizione-jumbotrone"
         style={{ display: "inline-block", textAlign: "center" }}
       >
-        Il futuro dell'umanita non e piu sulla Terra. Oggi puoi rivendicare il
+        Il futuro dell'umanita non e più sulla Terra. Oggi puoi rivendicare il
         tuo posto tra le stelle.
         <br />
         Non guardare lo spazio. Entraci dentro.

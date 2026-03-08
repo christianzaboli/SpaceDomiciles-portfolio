@@ -21,6 +21,7 @@ export const NAV_LINKS = [
     iconClass: "fa-regular fa-message marg",
   },
 ]
+
 export const TEAM_MEMBERS = [
   {
     name: "Alessandro",
@@ -57,4 +58,6 @@ export const TEAM_MEMBERS = [
     linkedin: "https://www.linkdn.com",
     facebook: "https://www.facebook.com",
   },
-]
+];
+
+export const FREE_SHIPPING_THRESHOLD = 1500;

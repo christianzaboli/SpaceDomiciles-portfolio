@@ -8,6 +8,7 @@ import galaxyIcon from "/img/galaxy-icon.png";
 import CartItem from "../Components/MicroComponents/CartItem";
 import DeleteCartOverlay from "../Components/MicroComponents/deleteCartOverlay";
 import { scrollToTop } from "../libs/utils";
+import { FREE_SHIPPING_THRESHOLD } from "../libs/consts";
 
 export default function CarrelloPage() {
   const { items, onQtyChange, loading, clearCart } = useCart();
@@ -26,7 +27,6 @@ export default function CarrelloPage() {
     0,
   );
 
-  const FREE_SHIPPING_THRESHOLD = 1500;
 
   if (loading) return <p>Caricamento carrello...</p>;
 
