@@ -5,9 +5,9 @@ export default function HomeIntroSection() {
   return (
     <>
       <BlurText
-        text="Benvenuto in Space Domicile"
-        delay={400}
-        animateBy="words"
+        text="Benvenuti in Space Domicile"
+        delay={30}
+        animateBy=""
         direction="top"
         onAnimationComplete={() => {
           console.log("Animation completed!");
@@ -19,7 +19,9 @@ export default function HomeIntroSection() {
         className="descrizione-jumbotrone"
         style={{ display: "inline-block", textAlign: "center" }}
       >
-        Il futuro dell'umanita non e più sulla Terra. Oggi puoi rivendicare il
+        Il futuro dell'umanita non e più sulla Terra. 
+        <br />
+        Oggi puoi rivendicare il
         tuo posto tra le stelle.
         <br />
         Non guardare lo spazio. Entraci dentro.

@@ -23,7 +23,7 @@ const BlurText = ({
     animationTo,
     easing = t => t,
     onAnimationComplete,
-    stepDuration = 0.35
+    stepDuration = 0.30
 }) => {
     const elements = animateBy === 'words' ? text.split(' ') : text.split('');
     const [inView, setInView] = useState(false);
@@ -54,7 +54,7 @@ const BlurText = ({
     const defaultTo = useMemo(
         () => [
             {
-                filter: 'blur(5px)',
+                filter: 'blur(3px)',
                 opacity: 0.5,
                 y: direction === 'top' ? 5 : -5
             },

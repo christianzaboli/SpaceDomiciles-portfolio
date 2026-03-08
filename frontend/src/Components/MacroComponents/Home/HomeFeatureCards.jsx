@@ -1,34 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGlobe,
-  faCertificate,
-  faStar,
-  faRocket,
-} from "@fortawesome/free-solid-svg-icons";
-import GradientText from "../../ReactBits/GradientText";
 
-const FEATURE_ITEMS = [
-  {
-    icon: faGlobe,
-    title: "Pianeti Reali",
-    description: "Terreni su pianeti realmente scoperti dalla NASA e dall'ESA",
-  },
-  {
-    icon: faCertificate,
-    title: "Certificato Ufficiale",
-    description: "Ricevi un certificato di proprieta galattica registrato",
-  },
-  {
-    icon: faStar,
-    title: "Investimento Unico",
-    description: "Possiedi un pezzo di universo per sempre",
-  },
-  {
-    icon: faRocket,
-    title: "Spedizione gratuita",
-    description: "Del tuo attestato con un minimo d'acquisto di 1500 EUR",
-  },
-];
+import GradientText from "../../ReactBits/GradientText";
+import { FEATURE_ITEMS } from "../../../libs/consts";
 
 export default function HomeFeatureCards() {
   return (

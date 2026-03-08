@@ -1,6 +1,12 @@
 import milkyWay from "/img/milky-way.png";
 import andromeda from "/img/andromeda.png";
 import sombrero from "/img/sombrero.png";
+import {
+  faGlobe,
+  faCertificate,
+  faStar,
+  faRocket,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const NAV_LINKS = [
   {
@@ -71,21 +77,44 @@ export const GALAXY_ITEMS = [
     imageSrc: milkyWay,
     imageAlt: "Via Lattea",
     title: "Esplora la Via Lattea",
-    description: "Scopri stelle, pianeti e sistemi abitabili.",
+    description: "Scopri stelle e pianeti abitabili nella nostra galassia",
   },
   {
     to: "/galaxies/andromeda",
     imageSrc: andromeda,
     imageAlt: "Andromeda",
     title: "Esplora Andromeda",
-    description: "Scopri stelle, pianeti e sistemi abitabili.",
+    description: "Esplora in largo nella galassia più prossima",
   },
   {
     to: "/galaxies/sombrero",
     imageSrc: sombrero,
     imageAlt: "Sombrero",
     title: "Esplora Sombrero",
-    description: "Scopri stelle, pianeti e sistemi abitabili.",
+    description: "Lo spazio é vasto e fantastico, come i pianeti di questa galassia",
     imageClassName: "card-image-sombrero",
+  },
+];
+
+export const FEATURE_ITEMS = [
+  {
+    icon: faGlobe,
+    title: "Pianeti Reali",
+    description: "Terreni su pianeti realmente scoperti dalla NASA e dall'ESA",
+  },
+  {
+    icon: faCertificate,
+    title: "Certificato Ufficiale",
+    description: "Ricevi un certificato di proprieta galattica registrato",
+  },
+  {
+    icon: faStar,
+    title: "Investimento Unico",
+    description: "Possiedi un pezzo di universo per sempre",
+  },
+  {
+    icon: faRocket,
+    title: "Spedizione gratuita",
+    description: `Del tuo attestato con un minimo d'acquisto di ${FREE_SHIPPING_THRESHOLD} EUR`,
   },
 ];

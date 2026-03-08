@@ -4755,8 +4755,8 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 .mw-card-search-s:hover::before {
-  backdrop-filter: blur(6px);
-  background: rgba(10, 0, 25, 0.75);
+    backdrop-filter: blur(2px);
+    background: rgba(10, 0, 25, 0.55);
 }
 
 .mw-card-search-s .mw-explore-s {
