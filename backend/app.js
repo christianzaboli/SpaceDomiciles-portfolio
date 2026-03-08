@@ -11,7 +11,7 @@ import certificatesRouter from "./routers/certificatesRouter.js";
 import galaxiesRouter from "./routers/galaxiesRouter.js";
 import stacksRouter from "./routers/stacksRouter.js";
 import customersRouter from "./routers/customersRouter.js";
-import invoicesStackRouter from "./routers/invoicesStackRouter.js";
+import invoicesStackRouter from "./routers/InvoicesStackRouter.js";
 import invoicesRouter from "./routers/invoicesRouter.js";
 import planetsRouter from "./routers/planetsRouter.js";
 import paymentsRouter from "./routers/paymentsRouter.js";
