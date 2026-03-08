@@ -1,5 +1,5 @@
 import {Router} from "express";
-import {index, showSingle, store, update, patch, destroy} from "../controllers/customersController.js";
+import {index, showSingle, store, update, patch, destroy} from "../controllers/CustomersController.js";
 
 const router = Router();
 
