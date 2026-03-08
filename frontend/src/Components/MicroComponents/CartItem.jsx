@@ -1,5 +1,5 @@
 import { AnimatePresence } from "framer-motion";
-import DeleteCartOverlay from "./deleteCartOverlay";
+import DeleteCartOverlay from "./deleteCartOverlay.jsx";
 import { useState } from "react";
 
 export default function CartItem({ item, onQtyChange }) {

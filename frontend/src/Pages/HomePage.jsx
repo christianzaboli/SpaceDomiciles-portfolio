@@ -1,11 +1,11 @@
-import HomeBackground from "../Components/MacroComponents/HomeBackground";
-import HomeIntroSection from "../Components/MacroComponents/Home/HomeIntroSection";
-import HomeFeatureCards from "../Components/MacroComponents/Home/HomeFeatureCards";
-import HomeGalaxySection from "../Components/MacroComponents/Home/HomeGalaxySection";
-import HomePopularPlanetsSection from "../Components/MacroComponents/Home/HomePopularPlanetsSection";
+import HomeBackground from "../Components/MacroComponents/HomeBackground.jsx";
+import HomeIntroSection from "../Components/MacroComponents/Home/HomeIntroSection.jsx";
+import HomeFeatureCards from "../Components/MacroComponents/Home/HomeFeatureCards.jsx";
+import HomeGalaxySection from "../Components/MacroComponents/Home/HomeGalaxySection.jsx";
+import HomePopularPlanetsSection from "../Components/MacroComponents/Home/HomePopularPlanetsSection.jsx";
 import { useState, useEffect, useRef, useCallback } from "react";
 import axios from "axios";
-import { buildApiUrl } from "../libs/utils";
+import { buildApiUrl } from "../libs/utils.jsx";
 
 export default function HomePage() {
   const contentRef = useRef(null);

@@ -1,4 +1,4 @@
-import { useCart } from "../../Contexts/CartContext";
+import { useCart } from "../../Contexts/CartContext.jsx";
 export default function CartBadge() {
   const { items } = useCart();
 

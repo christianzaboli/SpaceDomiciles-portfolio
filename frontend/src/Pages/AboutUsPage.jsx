@@ -1,7 +1,7 @@
-import GradientText from "../Components/ReactBits/GradientText";
-import BackToHomeBtn from "../Components/MicroComponents/BackToHomeBtn";
-import TeamMemberCard from "../Components/MicroComponents/TeamMemberCard";
-import { TEAM_MEMBERS } from "../libs/consts";
+import GradientText from "../Components/ReactBits/GradientText.jsx";
+import BackToHomeBtn from "../Components/MicroComponents/BackToHomeBtn.jsx";
+import TeamMemberCard from "../Components/MicroComponents/TeamMemberCard.jsx";
+import { TEAM_MEMBERS } from "../libs/consts.jsx";
 
 export default function AboutUsPage() {
   return (

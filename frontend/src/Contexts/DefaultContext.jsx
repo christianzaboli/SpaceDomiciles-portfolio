@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { API_BASE_URL, buildApiUrl } from "../libs/utils";
+import { API_BASE_URL, buildApiUrl } from "../libs/utils.jsx";
 
 export const DefaultContext = createContext();
 

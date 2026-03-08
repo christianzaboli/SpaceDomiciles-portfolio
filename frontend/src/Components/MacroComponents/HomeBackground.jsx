@@ -1,5 +1,5 @@
-import Galaxy from "../ReactBits/Galaxy";
-import useHomeBackground from "../../hooks/useHomeBackground";
+import Galaxy from "../ReactBits/Galaxy.jsx";
+import useHomeBackground from "../../hooks/useHomeBackground.jsx";
 
 export default function HomeBackground() {
   const { shouldUseGalaxy, galaxyConfig, webglFallbackStyle } =

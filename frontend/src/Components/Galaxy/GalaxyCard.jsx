@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { scrollToTop } from "../../libs/utils";
+import { scrollToTop } from "../../libs/utils.jsx";
 
 export default function GalaxyCard({ galaxy }) {
   return (

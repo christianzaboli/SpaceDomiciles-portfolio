@@ -1,4 +1,4 @@
-import BraintreeDropIn from "../MicroComponents/braintreeDropIn";
+import BraintreeDropIn from "../MicroComponents/braintreeDropIn.jsx";
 
 export default function CheckoutActions({
   onBackToCart,

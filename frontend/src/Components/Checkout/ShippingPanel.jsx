@@ -1,5 +1,5 @@
-import CheckoutFields from "./CheckoutFields";
-import { SHIPPING_FIELDS } from "./checkoutConfig";
+import CheckoutFields from "./CheckoutFields.jsx";
+import { SHIPPING_FIELDS } from "./checkoutConfig.js";
 
 export default function ShippingPanel({
   shipping,

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { buildApiUrl } from "../libs/utils";
-import GalaxyCard from "../Components/Galaxy/GalaxyCard";
-import BackToHomeBtn from "../Components/MicroComponents/BackToHomeBtn";
+import { buildApiUrl } from "../libs/utils.jsx";
+import GalaxyCard from "../Components/Galaxy/GalaxyCard.jsx";
+import BackToHomeBtn from "../Components/MicroComponents/BackToHomeBtn.jsx";
 export default function GalaxiesList() {
   const [galaxies, setGalaxies] = useState([]);
 

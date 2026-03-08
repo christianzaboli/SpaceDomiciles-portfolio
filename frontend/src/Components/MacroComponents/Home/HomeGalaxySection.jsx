@@ -1,6 +1,6 @@
-import HomeDiscoveryCard from "./HomeDiscoveryCard";
-import HomeSectionTitle from "./HomeSectionTitle";
-import { GALAXY_ITEMS } from "../../../libs/consts";
+import HomeDiscoveryCard from "./HomeDiscoveryCard.jsx";
+import HomeSectionTitle from "./HomeSectionTitle.jsx";
+import { GALAXY_ITEMS } from "../../../libs/consts.jsx";
 
 
 export default function HomeGalaxySection() {

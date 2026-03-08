@@ -1,9 +1,9 @@
 import { Link, useSearchParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useDefaultContext } from "../Contexts/DefaultContext";
-import FilterDrawer from "../Components/MicroComponents/FilterDrawer";
-import { buildApiUrl, scrollToTop } from "../libs/utils";
+import { useDefaultContext } from "../Contexts/DefaultContext.jsx";
+import FilterDrawer from "../Components/MicroComponents/FilterDrawer.jsx";
+import { buildApiUrl, scrollToTop } from "../libs/utils.jsx";
 
 export default function SearchPage() {
   const { filters, setFilters, updateFilters, defaultFilter } =

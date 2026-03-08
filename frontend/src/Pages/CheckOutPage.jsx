@@ -1,8 +1,8 @@
-import ShippingPanel from "../Components/Checkout/ShippingPanel";
-import BillingPanel from "../Components/Checkout/BillingPanel";
-import OrderSummaryPanel from "../Components/Checkout/OrderSummaryPanel";
-import CheckoutActions from "../Components/Checkout/CheckoutActions";
-import useCheckoutPage from "../hooks/useCheckoutPage";
+import ShippingPanel from "../Components/Checkout/ShippingPanel.jsx";
+import BillingPanel from "../Components/Checkout/BillingPanel.jsx";
+import OrderSummaryPanel from "../Components/Checkout/OrderSummaryPanel.jsx";
+import CheckoutActions from "../Components/Checkout/CheckoutActions.jsx";
+import useCheckoutPage from "../hooks/useCheckoutPage.jsx";
 
 export default function CheckOutPage() {
   const {

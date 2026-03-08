@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import dropin from "braintree-web-drop-in";
 import axios from "axios";
-import { buildApiUrl } from "../../libs/utils";
+import { buildApiUrl } from "../../libs/utils.jsx";
 
 export default function BraintreeDropIn({
   amount,

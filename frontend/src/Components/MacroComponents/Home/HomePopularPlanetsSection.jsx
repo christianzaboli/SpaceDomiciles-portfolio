@@ -1,5 +1,5 @@
-import HomeDiscoveryCard from "./HomeDiscoveryCard";
-import HomeSectionTitle from "./HomeSectionTitle";
+import HomeDiscoveryCard from "./HomeDiscoveryCard.jsx";
+import HomeSectionTitle from "./HomeSectionTitle.jsx";
 
 export default function HomePopularPlanetsSection({ planets }) {
   const validPlanets = planets.filter(Boolean);

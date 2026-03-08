@@ -1,5 +1,5 @@
-import CheckoutFields from "./CheckoutFields";
-import { BILLING_FIELDS, COMPANY_FIELDS } from "./checkoutConfig";
+import CheckoutFields from "./CheckoutFields.jsx";
+import { BILLING_FIELDS, COMPANY_FIELDS } from "./checkoutConfig.js";
 
 export default function BillingPanel({
   billing,

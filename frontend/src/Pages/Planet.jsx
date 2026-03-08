@@ -1,10 +1,10 @@
 import { useCallback } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useCart } from "../Contexts/CartContext";
-import PlanetDetailsSection from "../Components/Planet/PlanetDetailsSection";
-import PlanetPackagesSection from "../Components/Planet/PlanetPackagesSection";
-import PlanetNearbySection from "../Components/Planet/PlanetNearbySection";
-import usePlanetPageData from "../hooks/usePlanetPageData";
+import { useCart } from "../Contexts/CartContext.jsx";
+import PlanetDetailsSection from "../Components/Planet/PlanetDetailsSection.jsx";
+import PlanetPackagesSection from "../Components/Planet/PlanetPackagesSection.jsx";
+import PlanetNearbySection from "../Components/Planet/PlanetNearbySection.jsx";
+import usePlanetPageData from "../hooks/usePlanetPageData.jsx";
 
 export default function Planet() {
   const navigate = useNavigate();

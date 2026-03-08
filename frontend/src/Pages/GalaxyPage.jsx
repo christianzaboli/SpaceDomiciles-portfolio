@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { buildApiUrl, scrollToTop } from "../libs/utils";
+import { buildApiUrl, scrollToTop } from "../libs/utils.jsx";
 
 export default function GalaxyPage() {
   // params e location

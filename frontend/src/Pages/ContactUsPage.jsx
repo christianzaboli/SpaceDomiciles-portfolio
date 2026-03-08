@@ -1,6 +1,6 @@
 import galaxyIcon from "/img/galaxy-icon.png";
 import { Link } from "react-router-dom";
-import { scrollToTop } from "../libs/utils";
+import { scrollToTop } from "../libs/utils.jsx";
 
 export default function ContactUs() {
   return (

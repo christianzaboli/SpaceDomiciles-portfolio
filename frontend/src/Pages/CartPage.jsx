@@ -1,14 +1,14 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useCart } from "../Contexts/CartContext";
+import { useCart } from "../Contexts/CartContext.jsx";
 import { AnimatePresence } from "framer-motion";
 
 import galaxyIcon from "/img/galaxy-icon.png";
 
-import CartItem from "../Components/MicroComponents/CartItem";
-import DeleteCartOverlay from "../Components/MicroComponents/deleteCartOverlay";
-import { scrollToTop } from "../libs/utils";
-import { FREE_SHIPPING_THRESHOLD } from "../libs/consts";
+import CartItem from "../Components/MicroComponents/CartItem.jsx";
+import DeleteCartOverlay from "../Components/MicroComponents/deleteCartOverlay.jsx";
+import { scrollToTop } from "../libs/utils.jsx";
+import { FREE_SHIPPING_THRESHOLD } from "../libs/consts.jsx";
 
 export default function CarrelloPage() {
   const { items, onQtyChange, loading, clearCart } = useCart();

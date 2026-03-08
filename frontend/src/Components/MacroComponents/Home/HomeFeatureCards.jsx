@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import GradientText from "../../ReactBits/GradientText";
-import { FEATURE_ITEMS } from "../../../libs/consts";
+import GradientText from "../../ReactBits/GradientText.jsx";
+import { FEATURE_ITEMS } from "../../../libs/consts.jsx";
 
 export default function HomeFeatureCards() {
   return (

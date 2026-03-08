@@ -1,7 +1,7 @@
-import { useCart } from "../../Contexts/CartContext";
+import { useCart } from "../../Contexts/CartContext.jsx";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { scrollToTop } from "../../libs/utils";
+import { scrollToTop } from "../../libs/utils.jsx";
 export default function CartDrawer({ open, onClose }) {
   const { items, onQtyChange } = useCart();
   const itemsArray = Object.values(items);

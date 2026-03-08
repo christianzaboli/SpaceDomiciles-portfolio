@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
-import { buildApiUrl } from "../libs/utils";
+import { buildApiUrl } from "../libs/utils.jsx";
 
 export default function usePlanetPageData(planetSlug, onNotFound) {
   const [planet, setPlanet] = useState(null);

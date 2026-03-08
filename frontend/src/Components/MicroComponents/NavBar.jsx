@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 import galaxyIcon from "/img/galaxy-icon.png";
-import CartBadge from "./CartBadge";
+import CartBadge from "./CartBadge.jsx";
 import { useState, useEffect } from "react";
-import { scrollToTop } from "../../libs/utils";
-import useDrawer from "../../hooks/useDrawer";
-import { NAV_LINKS } from "../../libs/consts";
+import { scrollToTop } from "../../libs/utils.jsx";
+import useDrawer from "../../hooks/useDrawer.jsx";
+import { NAV_LINKS } from "../../libs/consts.jsx";
 
 
 function NavBrand() {

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useCart } from "../Contexts/CartContext";
-import { buildApiUrl, scrollToTop } from "../libs/utils";
-import { FREE_SHIPPING_THRESHOLD } from "../libs/consts";
-import { INITIAL_BILLING, INITIAL_SHIPPING } from "../Components/Checkout/checkoutConfig";
+import { useCart } from "../Contexts/CartContext.jsx";
+import { buildApiUrl, scrollToTop } from "../libs/utils.jsx";
+import { FREE_SHIPPING_THRESHOLD } from "../libs/consts.jsx";
+import { INITIAL_BILLING, INITIAL_SHIPPING } from "../Components/Checkout/checkoutConfig.js";
 
 export default function useCheckoutPage() {
   const { items, clearCart } = useCart();

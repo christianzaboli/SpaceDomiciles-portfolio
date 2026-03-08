@@ -1,5 +1,5 @@
-import BlurText from "../../ReactBits/BlurText";
-import GradientText from "../../ReactBits/GradientText";
+import BlurText from "../../ReactBits/BlurText.jsx";
+import GradientText from "../../ReactBits/GradientText.jsx";
 
 export default function HomeIntroSection() {
   return (

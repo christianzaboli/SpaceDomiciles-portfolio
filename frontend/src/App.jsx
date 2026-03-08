@@ -2,29 +2,29 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // LAYOUT
-import DefaultLayout from "./Layout/DefaultLayout";
+import DefaultLayout from "./Layout/DefaultLayout.jsx";
 
 // CONTEXTS
-import { DefaultProvider } from "./Contexts/DefaultContext";
-import { CartProvider } from "./Contexts/CartContext";
-import useDrawer, { DrawerProvider } from "./hooks/useDrawer";
+import { DefaultProvider } from "./Contexts/DefaultContext.jsx";
+import { CartProvider } from "./Contexts/CartContext.jsx";
+import useDrawer, { DrawerProvider } from "./hooks/useDrawer.jsx";
 
 // PAGINE
-import HomePage from "./Pages/HomePage";
-import AboutUsPage from "./Pages/AboutUsPage";
-import ContactUs from "./Pages/ContactUsPage";
-import Planet from "./Pages/Planet";
-import CartPage from "./Pages/CartPage";
-import SearchPage from "./Pages/SearchPage";
-import ComingSoon from "./Pages/ComingSoon";
-import CheckOutPage from "./Pages/CheckOutPage";
-import GalaxiesList from "./Pages/GalaxiesList";
-import GalaxyPage from "./Pages/GalaxyPage";
-import NotFoundPage from "./Pages/NotFoundPage";
-import Success from "./Pages/Success";
+import HomePage from "./Pages/HomePage.jsx";
+import AboutUsPage from "./Pages/AboutUsPage.jsx";
+import ContactUs from "./Pages/ContactUsPage.jsx";
+import Planet from "./Pages/Planet.jsx";
+import CartPage from "./Pages/CartPage.jsx";
+import SearchPage from "./Pages/SearchPage.jsx";
+import ComingSoon from "./Pages/ComingSoon.jsx";
+import CheckOutPage from "./Pages/CheckOutPage.jsx";
+import GalaxiesList from "./Pages/GalaxiesList.jsx";
+import GalaxyPage from "./Pages/GalaxyPage.jsx";
+import NotFoundPage from "./Pages/NotFoundPage.jsx";
+import Success from "./Pages/Success.jsx";
 
 //components
-import CartDrawer from "./Components/MicroComponents/CartDrawer";
+import CartDrawer from "./Components/MicroComponents/CartDrawer.jsx";
 
 function AppContent() {
   const { drawerOpen, closeDrawer } = useDrawer();

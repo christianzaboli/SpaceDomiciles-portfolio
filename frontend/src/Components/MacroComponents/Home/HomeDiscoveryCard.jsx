@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import GradientText from "../../ReactBits/GradientText";
-import { scrollToTop } from "../../../libs/utils";
+import GradientText from "../../ReactBits/GradientText.jsx";
+import { scrollToTop } from "../../../libs/utils.jsx";
 
 export default function HomeDiscoveryCard({
   to,

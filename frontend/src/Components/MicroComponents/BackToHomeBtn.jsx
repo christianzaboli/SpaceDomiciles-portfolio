@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { scrollToTop } from "../../libs/utils";
+import { scrollToTop } from "../../libs/utils.jsx";
 import galaxyIcon from "/img/galaxy-icon.png";
 export default function () {
   return (

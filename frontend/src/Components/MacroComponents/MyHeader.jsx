@@ -1,4 +1,4 @@
-import NavBar from "../MicroComponents/NavBar";
+import NavBar from "../MicroComponents/NavBar.jsx";
 export default function MyHeader() {
   var prevScrollpos = window.pageYOffset;
   window.onscroll = function () {

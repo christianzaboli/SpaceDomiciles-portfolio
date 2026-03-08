@@ -1,4 +1,4 @@
-import PackageCard from "../MicroComponents/packageCard";
+import PackageCard from "../MicroComponents/packageCard.jsx";
 
 export default function PlanetPackagesSection({ planet, stacks, onAddToCart }) {
   const isReady = planet && Array.isArray(stacks);
