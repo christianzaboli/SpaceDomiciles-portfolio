@@ -6,7 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import galaxyIcon from "/img/galaxy-icon.png";
 
 import CartItem from "../Components/MicroComponents/CartItem.jsx";
-import DeleteCartOverlay from "../Components/MicroComponents/deleteCartOverlay.jsx";
+import DeleteCartOverlay from "../Components/MicroComponents/DeleteCartOverlay.jsx";
 import { scrollToTop } from "../libs/utils.jsx";
 import { FREE_SHIPPING_THRESHOLD } from "../libs/consts.jsx";
 
