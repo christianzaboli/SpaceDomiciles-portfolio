@@ -1,4 +1,4 @@
-# 🚀 Space Domiciles
+# 🚀 Space Domicile
 
 **SpaceDomiciles** è una web application **full-stack** che simula la vendita di proprietà su pianeti e corpi celesti.
 Gli utenti possono esplorare pianeti, visualizzare informazioni dettagliate e simulare l'acquisto di proprietà spaziali.
